@@ -64,4 +64,15 @@ $(function(){
       slideShow(".slide", 'playingSlide');
     }, 10000);
   }, 5000);
+    $('.navigation').children('div').hover(function() {
+
+    $(this).prev().prevAll().addClass('sSize');
+    $(this).prev().addClass('rSize')
+    $(this).addClass('lSIze sharp');
+    $(this).next().addClass('rSize')
+    $(this).next().nextAll().addClass('sSize');
+  },
+  function() {
+    $(this).parent().children().removeClass('sSize rSize lSIze sharp');
+  });
 });
