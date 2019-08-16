@@ -1,5 +1,5 @@
 $(function(){
-  windowHeight=$('main').offset().top;
+  let windowHeight=$('main').offset().top;
   console.log('nav_top_____'+$('nav').offset().top);
 
   console.log('main__top___'+$('main').offset().top);
