@@ -1,5 +1,5 @@
 $(function(){
-
+  windowHeight=$('main').offset().top;
   console.log('nav_top_____'+$('nav').offset().top);
 
   console.log('main__top___'+$('main').offset().top);
@@ -86,11 +86,11 @@ $(function(){
 
       $('.navigation').children('div').removeClass('sharp');
       $('.navigation').removeClass('colorNavi');
-    } else if ($('.navigation').offset().top < $(window).height()*1.03) {
+    } else if ($('.navigation').offset().top < windowHeight*1.03) {
       $('.navigation').removeClass('colorNavi');
 
 
-    } else if ($('.navigation').offset().top > $(window).height()*1.03) {
+    } else if ($('.navigation').offset().top > windowHeight*1.03) {
       $('.navigation').children('div').addClass('sharp');
       $('.navigation').addClass('colorNavi');
 
