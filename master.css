@@ -1,7 +1,6 @@
 body{
   margin: 0;
   padding: 0;
-  height:300vh;
 }
 header {
   margin: 0;
@@ -15,7 +14,6 @@ header {
   align-items: center;
   color: #fff;
   text-shadow: 0 20px 30px rgba(0, 0, 0, .2);
-  backgroud:green;
   z-index: -1;
 }
 .slideLayer {
@@ -132,6 +130,17 @@ nav {
   animation-fill-mode: forwards;
   background: transparent;
 }
+nav::after {
+  position: absolute;
+  left: 0.5vw;
+  writing-mode: vertical-lr;
+  font-size: 5px;
+  color: #51545f;
+  width: 1em;
+  height: 100vh;
+  text-align: center;
+  content: 'copyright©YangKun All Rights Reserved';
+}
 
 @keyframes slideIn {
   0% {
@@ -176,20 +185,114 @@ nav .navigation .sharp {
   filter: blur(0);
   opacity: 1;
 }
-main{
-  margin:0;
-  padding:0;
-  height:100vh;
-  background:blue;
-}
+
 h1{
   text-transform: uppercase;
 }
 main h1{
   padding-bottom: 5vh;
+  line-height:1.5em;
   width:100%;
 }
 img{
   width:100%;
 }
 
+main {
+  margin: 0;
+  position: relative;
+  padding: 0;
+  width: 100vw;
+  background: #eaeae0;
+  color: #51545f;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+
+.container {
+  margin-top: 5vh;
+  padding: 5vh 30vw 5vh 20vw;
+  position: relative;
+}
+
+.container::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  width: 80%;
+  left: 10%;
+  display: block;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(81, 84, 95, 0), rgba(81, 84, 95, 1), rgba(81, 84, 95, 0));
+  background: -o-linear-gradient(left, rgba(81, 84, 95, 0), rgba(81, 84, 95, 1), rgba(81, 84, 95, 0));
+  background: linear-gradient(left, rgba(81, 84, 95, 0), rgba(81, 84, 95, 1), rgba(81, 84, 95, 0));
+}
+
+
+
+.contents::first-letter {
+  font-size: 2em;
+}
+
+.contentsImgContainer{
+  width:35%;
+  height: auto;
+}
+.contents img{
+  border-radius: 5%;
+}
+.float-box{
+  float:left;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  vertical-align: baseline;
+}
+.float-clear{
+  overflow: hidden;
+}
+
+
+.profileImgContainer{
+  margin:10vh 30%;
+  position: relative;
+}
+
+.profileImgContainer img{
+  border-radius: 5%;
+  position: relative;
+  filter: grayscale(0.4);
+}
+
+.profileText{
+  text-align: center;
+  margin:auto 20%;
+}
+
+.item{
+  position: relative;
+  top:10vh;
+  color: #eaeae0;
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.slideUpItem{
+  animation: contents-slide-up 1s linear forwards;
+
+}
+
+@keyframes contents-slide-up{
+  0%{
+
+  }
+  100%{
+
+    top:0;
+    color:#51545f;
+    opacity: 1;
+    filter:blur(0);
+  }
+}
