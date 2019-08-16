@@ -98,5 +98,10 @@ $(function(){
       $('.navigation').children('div').addClass('sharp');
 
     }
+        $('.contents').children('.item').not('slideUpItem').each(function() {
+      if ($(this).offset().top - 0.9 * $(window).height() < $(window).scrollTop()) {
+        $(this).addClass('slideUpItem');
+      };
+    });
   });  
 });
