@@ -99,7 +99,7 @@ $(function(){
 
     }
         $('.contents').children('.item').not('slideUpItem').each(function() {
-      if ($(this).offset().top - 0.9 * $(window).height() < $(window).scrollTop()) {
+      if ($(this).offset().top - 0.9 * windowHeight() < $(window).scrollTop()) {
         $(this).addClass('slideUpItem');
       };
     });
