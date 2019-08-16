@@ -1,7 +1,7 @@
 $(function(){
-  console.log('header top_____'+$('header').offset().bottom);
+
   console.log('nav_top_____'+$('nav').offset().top);
-  console.log('nav_bottom____'+$('nav').offset().bottom);
+
   console.log('main__top___'+$('main').offset().top);
     function getRandom(min, max) {
     var random = Math.floor(Math.random() * (max + 1 - min)) + min;
@@ -75,4 +75,31 @@ $(function(){
   function() {
     $(this).parent().children().removeClass('sSize rSize lSIze sharp');
   });
+  
+    $(window).scroll(function() {
+    console.log($('nav').offset().top);
+    console.log('navi_height______'+$('.navigation').offset().top);
+    console.log('main____'+$('main').offset().top);
+    console.log('_window_height______'+$(window).height());
+    console.log('_______________');
+    if ($('.navigation').offset().top < $(window).height()*1.01) {
+
+      $('.navigation').children('div').removeClass('sharp');
+      $('.navigation').removeClass('colorNavi');
+    } else if ($('.navigation').offset().top < $(window).height()*1.03) {
+      $('.navigation').removeClass('colorNavi');
+
+
+    } else if ($('.navigation').offset().top > $(window).height()*1.03) {
+      $('.navigation').children('div').addClass('sharp');
+      $('.navigation').addClass('colorNavi');
+
+    } else {
+      $('.navigation').children('div').addClass('sharp');
+
+    }
+
+    });
+  });
+  
 });
