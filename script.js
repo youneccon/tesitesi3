@@ -98,8 +98,5 @@ $(function(){
       $('.navigation').children('div').addClass('sharp');
 
     }
-
-    });
-  });
-  
+  });  
 });
