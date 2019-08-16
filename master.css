@@ -201,10 +201,11 @@ img{
 main {
   margin: 0;
   position: relative;
-  padding:auto 0;
+  padding:0;
   width: 100vw;
   background: #eaeae0;
   color: #51545f;
+  overflow:hidden;
 }
 
 h1{
