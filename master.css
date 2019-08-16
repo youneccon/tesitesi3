@@ -37,19 +37,19 @@ header {
 }
 
 .bg01 {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 60, 0.9)), url(images/bg01.jpg);
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 60, 0.9)), url(bg01.jpg);
   background-size: cover;
    z-index: 2;
 }
 
 .bg02 {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(40, 20, 0, 0.9)), url(images/bg02.jpg);
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(40, 20, 0, 0.9)), url(bg02.jpg);
   z-index: 1;
   background-size: cover;
 }
 
 .bg03 {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(40, 20, 69, 0.9)), url(images/bg03.jpg);
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(40, 20, 69, 0.9)), url(bg03.jpg);
   z-index: 0;
   background-size: cover;
 }
