@@ -119,6 +119,63 @@ nav {
   z-index: 1;
   background:red;
 }
+.navigation {
+  position: absolute;
+  padding: 0 25vw;
+  box-sizing: border-box;
+  width: 100vw;
+  top: 5vh;
+  display: flex;
+  justify-content: space-around;
+  animation: slideIn 2s ease-Out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  background: transparent;
+}
+
+@keyframes slideIn {
+  0% {
+    top: 5vh;
+  }
+
+  100% {
+    top: -3vh;
+  }
+}
+
+.colorNavi {
+  background: #eaeae0;
+}
+
+.navigation div {
+  font-size: 1em;
+  color: white;
+  opacity: 0.4;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px black;
+  letter-spacing: 0.1em;
+  filter: blur(0.8px);
+  transition: 1s;
+}
+
+nav .navigation .sSize {
+  font-size: 0.8em;
+  filter: blur(3px);
+}
+
+nav .navigation .rSize {
+  font-size: 0.9em;
+  filter: blur(2px);
+}
+
+nav .navigation .lSize {
+  font-size: 1em;
+}
+
+nav .navigation .sharp {
+  filter: blur(0);
+  opacity: 1;
+}
 main{
   margin:0;
   padding:0;
@@ -135,3 +192,4 @@ main h1{
 img{
   width:100%;
 }
+
