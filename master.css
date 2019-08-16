@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  height:3vh;
+  height:300vh;
 }
 header {
   margin: 0;
@@ -30,6 +30,6 @@ nav {
 main{
   margin:0;
   padding:0;
-  height:1vh;
+  height:100vh;
   background:blue;
 }
