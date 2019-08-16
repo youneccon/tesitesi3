@@ -1,1 +1,29 @@
-
+body{
+  margin: 0;
+  padding: 0;
+  height:3vh;
+}
+header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 20px 30px rgba(0, 0, 0, .2);
+  backgroud:green;
+  z-index: -1;
+}
+nav {
+  content: '';
+  position: -webkit-sticky;
+  position: sticky;
+  top: 3vh;
+  font-family: sans-serif;
+  z-index: 1;
+  background:red;
+}
