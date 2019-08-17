@@ -1,7 +1,19 @@
 body{
   margin: 0;
   padding: 0;
+  position: relative;
 }
+
+.loadingPage{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background: #eaeae0;
+  display: block;
+}
+
 header {
   margin: 0;
   padding: 0;
@@ -9,7 +21,7 @@ header {
   top:0;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: row-reverse;
   align-items: center;
   color: #fff;
@@ -34,27 +46,25 @@ header {
   filter: blur(6px);
 }
 
-.bg01 {
+#bg01 {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 60, 0.9)), url(bg01.jpg);
   background-size: cover;
-   z-index: 2;
 }
 
-.bg02 {
+#bg02 {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(40, 20, 0, 0.9)), url(bg02.jpg);
-  z-index: 1;
+  display: none;
   background-size: cover;
 }
 
-.bg03 {
+#bg03 {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(40, 20, 69, 0.9)), url(bg03.jpg);
-  z-index: 0;
+  display: none;
   background-size: cover;
 }
 
 .playingSlide {
-  animation: slide-far-away 2s ease-out;
-  z-index: 0;
+  animation: slide-far-away 2s ease-out forwards;
 }
 
 @keyframes slide-far-away {
@@ -109,13 +119,13 @@ header {
 }
 
 nav {
+  display: none;
   content: '';
   position: -webkit-sticky;
   position: sticky;
   top: 3vh;
   font-family: sans-serif;
   z-index: 1;
-  background:red;
 }
 .navigation {
   position: absolute;
@@ -199,6 +209,7 @@ img{
 }
 
 main {
+  display: none;
   margin: 0;
   position: relative;
   padding:0;
